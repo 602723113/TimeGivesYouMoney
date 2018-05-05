@@ -48,6 +48,7 @@ import java.util.UUID;
 import java.util.logging.Level;
 import java.util.zip.GZIPOutputStream;
 
+import me.wildn00b.timegivesyoumoney.util.CommonUtils;
 import net.milkbowl.vault.chat.Chat;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
@@ -536,7 +537,7 @@ public class Metrics {
     final boolean onlineMode = Bukkit.getServer().getOnlineMode(); // TRUE if online mode is enabled
     final String pluginVersion = description.getVersion();
     final String serverVersion = Bukkit.getVersion();
-    final int playersOnline = Bukkit.getServer().getOnlinePlayers().size();
+    final int playersOnline = CommonUtils.getOnlinePlayers().size();
 
     // END server software specific section -- all code below does not use any code outside of this class / Java
 
